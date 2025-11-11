@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forjadores del Mañana | Educación Estratégica</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">FORJADORES DEL MAÑANA</div>
+        <nav class="nav">
+            <a href="mision.html">Nuestra Misión</a>
+            <a href="programas.html">Programas</a>
+            <a href="transparencia.html">Transparencia</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="donar.html" class="cta-button">DONAR AHORA</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Fomentando el Desarrollo Sostenible a través de la Educación Estratégica.</h1>
+                <p>Una plataforma de alto impacto dedicada a interrumpir el ciclo de la pobreza extrema mediante la inversión directa en el potencial educativo de la juventud.</p>
+                <a href="donar.html" class="cta-primary">INVIERTA AHORA</a>
+            </div>
+        </section>
+
+        <section class="impact-metrics">
+            <h2>Impacto Comprobado</h2>
+            <div class="metric-grid">
+                <div class="metric">
+                    <span>+1,200</span>
+                    <p>Estudiantes Beneficiados</p>
+                </div>
+                <div class="metric">
+                    <span>95%</span>
+                    <p>Tasa de Retención</p>
+                </div>
+                <div class="metric">
+                    <span>3X</span>
+                    <p>Retorno Social de Inversión</p>
+                </div>
+            </div>
+        </section>
+        
+        </main>
+<script>
+(function() {
+  // Estilos del widget y chatbot
+  var style = document.createElement('style');
+  style.innerHTML = `
+    #chatbot-widget-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 9999;
+      background: #4f8ff0;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.17);
+      font-size: 28px;
+      cursor: pointer;
+    }
+    #chatbot-widget-window {
+      display: none;
+      position: fixed;
+      bottom: 100px;
+      right: 40px;
+      width: 350px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.20);
+      z-index: 9999;
+      flex-direction: column;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      min-height: 420px;
+    }
+    #chatbot-widget-header {
+      background: #4f8ff0;
+      color: #fff;
+      padding: 13px 16px;
+      font-size: 18px;
+      text-align: left;
+      font-weight: bold;
+    }
+    #chatbot-widget-box {
+      height: 280px;
+      overflow-y: auto;
+      padding: 16px;
+      background: #f7faff;
+      font-size: 14px;
+    }
+    .chatbot-message { margin-bottom: 14px; clear: both;}
+    .cb-bot {
+      background: #e7f0fe;
+      color: #333;
+      padding: 8px 13px;
+      border-radius: 8px 8px 8px 2px;
+      display: inline-block;
+      max-width: 80%;
+    }
+    .cb-user {
+      background: #4f8ff0;
+      color: #fff;
+      padding: 8px 13px;
+      border-radius: 8px 8px 2px 8px;
+      display: inline-block;
+      float: right;
+      max-width: 80%;
+    }
+    #chatbot-widget-form {
+      display: flex;
+      padding: 12px;
+      background: #fff;
+      border-top: 1px solid #e0e0e0;
+    }
+    #chatbot-widget-input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #4f8ff0;
+      border-radius: 3px;
+    }
+    #chatbot-widget-send {
+      background: #4f8ff0;
+      color: #fff;
+      border: none;
+      margin-left: 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      padding: 8px 16px;
+    }
+  `;
+  document.head.appendChild(style);
+
+  // Estructura HTML del widget y chatbot
+  var widgetBtn = document.createElement('button');
+  widgetBtn.id = 'chatbot-widget-btn';
+  widgetBtn.title = 'Abrir ChatBot';
+  widgetBtn.innerHTML = '💬';
+  document.body.appendChild(widgetBtn);
+
+  var widgetWin = document.createElement('div');
+  widgetWin.id = 'chatbot-widget-window';
+  widgetWin.innerHTML = `
+    <div id="chatbot-widget-header">Forjadores del Mañana</div>
+    <div id="chatbot-widget-box"></div>
+    <form id="chatbot-widget-form" autocomplete="off">
+      <input type="text" id="chatbot-widget-input" placeholder="Escribe tu pregunta..." required/>
+      <button type="submit" id="chatbot-widget-send">Enviar</button>
+    </form>
+  `;
+  document.body.appendChild(widgetWin);
+
+  // Preguntas y respuestas personalizadas
+  var responses = {
+    'hola': '¡Hola! Bienvenido al chat de Forjadores del Mañana. ¿En qué podemos ayudarte?',
+    '¿quiénes son forjadores del mañana?': 'Forjadores del Mañana es una organización sin fines de lucro dedicada a impulsar el desarrollo de niños y jóvenes a través de la educación y el apoyo social.',
+    'misión': 'Nuestra misión es brindar oportunidades educativas, culturales y sociales para contribuir a un mejor futuro de las nuevas generaciones.',
+    'visión': 'Ser una organización líder en la formación integral de niños y jóvenes, generando agentes de cambio positivos en la sociedad.',
+    '¿cómo puedo ayudar?': '¡Gracias por tu interés! Puedes apoyarnos como voluntario, con donaciones o difundiendo nuestra causa. Escribe "voluntariado" o "donaciones" para más información.',
+    'voluntariado': 'Para ser voluntario, solo contáctanos a través del formulario en nuestro sitio o al correo electrónico info@forjadoresdelmanana.org.',
+    'donaciones': 'Puedes donar a través de nuestra web o contactándonos directamente. Toda aportación impacta la vida de muchos niños y jóvenes.',
+    'eventos': 'Realizamos eventos educativos, culturales y campañas sociales. Consulta nuestro calendario en la web o síguenos en redes sociales.',
+    'contacto': 'Puedes contactarnos al WhatsApp +504 9999-9999, correo info@forjadoresdelmanana.org o en nuestras redes sociales.',
+    'gracias': '¡Gracias a ti por tu interés en Forjadores del Mañana! ¿Puedo ayudarte en algo más?',
+    'ayuda': 'Puedes preguntar sobre: quiénes somos, misión, visión, cómo ayudar, voluntariado, donaciones, eventos, contacto.',
+  };
+
+  function getBotResponse(input) {
+    var mensaje = input.toLowerCase();
+    for (var key in responses) {
+      if (mensaje.includes(key)) {
+        return responses[key];
+      }
+    }
+    return 'Lo siento, no tengo información sobre esa pregunta. Escribe "ayuda" para ver opciones.';
+  }
+
+  var widgetBox = widgetWin.querySelector('#chatbot-widget-box');
+  var widgetForm = widgetWin.querySelector('#chatbot-widget-form');
+  var widgetInput = widgetWin.querySelector('#chatbot-widget-input');
+
+  function appendMessage(text, sender) {
+    var m = document.createElement('div');
+    m.className = 'chatbot-message ' + sender;
+    m.innerHTML = '<span class="' + sender + '">' + text + '</span>';
+    widgetBox.appendChild(m);
+    widgetBox.scrollTop = widgetBox.scrollHeight;
+  }
+
+  // Mensaje de bienvenida personalizado
+  function greet() {
+    appendMessage('¡Hola! Soy el asistente virtual de Forjadores del Mañana. Escribe "ayuda" para ver las preguntas frecuentes.', 'cb-bot');
+  }
+
+  greet();
+
+  widgetForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var input = widgetInput.value.trim();
+    if (!input) return;
+    appendMessage(input, 'cb-user');
+    var reply = getBotResponse(input);
+    setTimeout(function() {
+      appendMessage(reply, 'cb-bot');
+    }, 600);
+    widgetInput.value = '';
+  });
+
+  // Mostrar/ocultar el widget
+  widgetBtn.onclick = function() {
+    if(widgetWin.style.display === 'none' || !widgetWin.style.display) {
+      widgetWin.style.display = 'flex';
+      setTimeout(() => widgetInput.focus(), 100);
+    } else {
+      widgetWin.style.display = 'none';
+    }
+  };
+})();
+</script>
+
+    <footer class="footer">
+        <p>&copy; 2025 Forjadores del Mañana. Todos los derechos reservados. | [Enlaces Legales]</p>
+    </footer>
+
+    </body>
+</html>

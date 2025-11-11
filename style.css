@@ -1,0 +1,166 @@
+/* Variables para colores (Fácil de modificar) */
+:root {
+    --color-primary: #002D62; /* Azul Marino Profundo (Confianza) */
+    --color-text: #333333;    /* Gris Oscuro Formal */
+    --color-background: #ffffff;
+    --color-accent: #1E90FF;  /* Azul para el CTA */
+}
+
+/* Base y Tipografía */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Header y Navegación */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    border-bottom: 1px solid #eee;
+    background-color: var(--color-background);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    margin-left: 25px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--color-primary);
+}
+
+/* Botón CTA en el Header */
+.cta-button {
+    background-color: var(--color-accent);
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 4px;
+    margin-left: 30px;
+}
+
+/* Sección HERO (El Contenido Principal) */
+.hero-section {
+    background-color: #f4f4f4; /* Fondo sutil para destacar */
+    padding: 80px 5%;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 2.8em;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Botón CTA Primario */
+.cta-primary {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.cta-primary:hover {
+    background-color: var(--color-accent);
+}
+
+/* Sección de Métricas de Impacto */
+.impact-metrics {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.impact-metrics h2 {
+    color: var(--color-primary);
+    margin-bottom: 40px;
+}
+
+.metric-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.metric {
+    flex-basis: 30%; /* Distribución equitativa */
+}
+
+.metric span {
+    display: block;
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.metric p {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: var(--color-text);
+}
+
+/* Footer */
+.footer {
+    padding: 20px 5%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Adaptación para móviles (Responsiveness Básico) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+
+    .nav a {
+        margin: 5px 10px;
+        display: inline-block;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .metric-grid {
+        flex-direction: column;
+    }
+}
