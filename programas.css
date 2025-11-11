@@ -1,0 +1,282 @@
+/* --- Variables para colores (Asegúrate de que estén al principio de tu CSS) --- */
+:root {
+    --color-primary: #002D62; /* Azul Marino Profundo (Confianza/Formal) */
+    --color-text: #333333;    /* Gris Oscuro (Legibilidad/Profesional) */
+    --color-background: #ffffff;
+    --color-accent: #007bff;  /* Azul brillante (Botones/Énfasis) */
+    --color-light-gray: #f4f4f9; /* Fondo muy sutil y limpio */
+    --color-border: #e0e0e0;
+}
+
+/* --- Base y Tipografía --- */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* --- Encabezado (Header) --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%; /* Ajusta el padding para que no sea demasiado ancho */
+    border-bottom: 3px solid var(--color-accent); /* Línea de acento corporativa */
+    background-color: var(--color-background);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-primary);
+    letter-spacing: 0.5px;
+}
+
+.nav {
+    display: flex; /* Para que los enlaces estén en línea */
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    margin-left: 25px; /* Espaciado entre enlaces */
+    font-weight: 600;
+    padding-bottom: 5px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav a:hover, .nav a.active {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.cta-button {
+    background-color: var(--color-primary);
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 4px;
+    margin-left: 30px;
+    transition: background-color 0.3s;
+    border: none; /* Asegura que no tenga borde por defecto */
+}
+.cta-button:hover {
+    background-color: var(--color-accent);
+}
+
+/* --- SECCIÓN PRINCIPAL (MAIN) - Contenedores y Centrado --- */
+main {
+    width: 100%; /* Asegura que main ocupe todo el ancho */
+    max-width: 1400px; /* Un ancho máximo razonable para el contenido */
+    margin: 0 auto; /* ¡Esto centra todo el contenido de main! */
+}
+
+/* Sección Hero de Subpágina */
+.hero-subpage {
+    background-color: var(--color-light-gray);
+    padding: 80px 5%; /* Padding vertical y horizontal */
+    text-align: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background-color: transparent; 
+    color: var(--color-primary);
+    max-width: 900px; /* Ancho para el texto del hero */
+    margin: 0 auto; /* Centrar el texto del hero */
+}
+
+.page-title {
+    font-size: 2.5em;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    color: var(--color-text);
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+/* --- SECCIONES DE CONTENIDO GENERAL --- */
+.padded-section {
+    padding: 60px 5%; /* Padding uniforme para las secciones */
+    background-color: var(--color-background);
+}
+
+.content-container {
+    max-width: 1000px; /* Ancho máximo para el contenido principal */
+    margin: 0 auto; /* ¡Esto centra el contenido dentro de cada sección! */
+}
+
+/* --- ESTILOS ESPECÍFICOS PARA PROGRAMAS --- */
+
+/* Estructura de la cuadrícula de los dos componentes */
+.program-model-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 40px; /* Espacio entre las columnas */
+    margin-bottom: 60px; /* Espacio antes del CTA final */
+}
+
+/* Estilo de las tarjetas de componentes */
+.program-component-card {
+    padding: 35px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: var(--color-light-gray); /* Fondo sutil para destacar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.component-title {
+    color: var(--color-primary);
+    font-size: 1.8em;
+    border-bottom: 3px solid var(--color-accent);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.component-intro-text {
+    font-style: italic;
+    font-size: 1em;
+    color: var(--color-text);
+    margin-bottom: 30px;
+}
+
+/* Lista de características (cada programa individual) */
+.program-feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.program-feature-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.program-feature-list li:last-child {
+    border-bottom: none;
+}
+
+.program-feature-title {
+    color: var(--color-text);
+    font-size: 1.15em; /* Ajustado ligeramente */
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.program-feature-list p {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+/* --- CTA Final (Evaluación Continua) --- */
+.cta-secondary-formal {
+    margin-top: 60px;
+    padding: 40px;
+    background-color: var(--color-light-gray);
+    border-radius: 6px;
+    text-align: center;
+    max-width: 1000px; /* Asegura que el CTA también se centre */
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--color-border); /* Borde sutil */
+}
+
+.cta-secondary-formal h3 {
+    color: var(--color-primary);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.cta-secondary-formal p {
+    margin-bottom: 20px;
+}
+
+.cta-primary {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.cta-primary:hover {
+    background-color: var(--color-accent);
+}
+
+/* Ajuste del tamaño para CTA secundario */
+.small-cta {
+    padding: 10px 25px;
+    font-size: 1em;
+}
+
+/* --- Footer --- */
+.footer {
+    padding: 20px 5%;
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+}
+.footer a { /* Estilo para enlaces en el footer */
+    color: white;
+    text-decoration: none;
+    margin-left: 5px;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Adaptación para móviles --- */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav {
+        flex-direction: column; /* Apilar enlaces en móvil */
+        margin-top: 15px;
+    }
+    .nav a {
+        margin: 5px 0; /* Espaciado vertical */
+        padding-bottom: 0; /* Quitar padding inferior */
+        border-bottom: none; /* Quitar borde inferior en móvil */
+    }
+    .cta-button {
+        margin-top: 15px;
+        margin-left: 0;
+    }
+    .hero-subpage {
+        padding: 50px 5%;
+    }
+    .page-title {
+        font-size: 2em;
+    }
+    .intro-text {
+        font-size: 1em;
+    }
+    .program-model-grid {
+        grid-template-columns: 1fr; /* Apilar programas en pantallas pequeñas */
+        gap: 30px;
+    }
+    .program-component-card {
+        padding: 25px;
+    }
+    .component-title {
+        font-size: 1.5em;
+    }
+    .cta-secondary-formal {
+        padding: 30px;
+    }
+}

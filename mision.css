@@ -1,0 +1,187 @@
+/* Variables para colores (Reafirmando los colores corporativos) */
+:root {
+    --color-primary: #002D62; /* Azul Marino Profundo (Confianza/Formal) */
+    --color-text: #333333;    /* Gris Oscuro (Legibilidad/Profesional) */
+    --color-background: #ffffff;
+    --color-accent: #007bff;  /* Azul brillante (Botones/Énfasis) */
+    --color-light-gray: #f4f4f9; /* Fondo muy sutil y limpio */
+    --color-border: #e0e0e0;
+}
+
+/* Base y Tipografía (sin cambios) */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Header (Formal y fijo) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    border-bottom: 3px solid var(--color-accent); /* Línea de acento corporativa */
+    background-color: var(--color-background);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-primary);
+    letter-spacing: 0.5px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    margin-left: 25px;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.nav a:hover, .nav a.active {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+/* Botón CTA en el Header */
+.cta-button {
+    background-color: var(--color-primary);
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 4px;
+    margin-left: 30px;
+    transition: background-color 0.3s;
+}
+.cta-button:hover {
+    background-color: var(--color-accent);
+}
+
+/* Sección Hero de Subpágina (Estilo Corporativo) */
+.hero-subpage {
+    background-color: var(--color-light-gray);
+    padding: 80px 5%;
+    text-align: center;
+    position: relative;
+}
+
+.hero-overlay {
+    /* Eliminamos el overlay si no hay imagen de fondo */
+    background-color: transparent; 
+    color: var(--color-primary);
+}
+
+.page-title {
+    font-size: 2.5em;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    color: var(--color-text);
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+/* Estructura de Contenido */
+.padded-section {
+    padding: 60px 5%;
+}
+
+.content-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Tarjetas de Principios (Clave para el Estilo Corporativo) */
+.content-structure {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.principle-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.principle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    flex-shrink: 0;
+    margin-right: 30px;
+    padding: 15px;
+    background-color: var(--color-light-gray);
+    border-radius: 50%;
+    line-height: 1;
+}
+
+.card-text h2 {
+    color: var(--color-primary);
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card-text p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* CTA Formal Secundario */
+.cta-secondary-formal {
+    margin-top: 60px;
+    padding: 40px;
+    background-color: var(--color-light-gray);
+    border-radius: 6px;
+    text-align: center;
+}
+
+.cta-secondary-formal h3 {
+    color: var(--color-primary);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.cta-secondary-formal p {
+    margin-bottom: 20px;
+}
+
+/* Botón primario (ajuste del tamaño para CTA secundario) */
+.small-cta {
+    padding: 10px 25px;
+    font-size: 1em;
+}
+
+/* Footer (sin cambios) */
+.footer {
+    padding: 20px 5%;
+    background-color: var(--color-primary); /* El footer usa el color primario oscuro */
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 768px) {
+    .principle-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .card-icon {
+        margin: 0 auto 15px auto;
+    }
+}

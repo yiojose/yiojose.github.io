@@ -1,0 +1,278 @@
+/* --- Variables para colores --- */
+:root {
+    --color-primary: #002D62; /* Azul Marino Profundo (Confianza/Formal) */
+    --color-text: #333333;    /* Gris Oscuro (Legibilidad/Profesional) */
+    --color-background: #ffffff;
+    --color-accent: #007bff;  /* Azul brillante (Botones/Énfasis) */
+    --color-light-gray: #f4f4f9; /* Fondo muy sutil y limpio */
+    --color-border: #e0e0e0; /* Borde suave */
+}
+
+/* --- Base y Tipografía --- */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* --- Centrado Global de Contenido Principal --- */
+main {
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo para el contenido principal del sitio */
+    margin: 0 auto; /* ¡Esto centra todo el contenido dentro de <main>! */
+    box-shadow: 0 0 20px rgba(0,0,0,0.05); /* Sombra suave para dar profundidad */
+    background-color: var(--color-background); /* Asegura fondo blanco */
+}
+
+/* --- Encabezado (Header) --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%; 
+    border-bottom: 3px solid var(--color-accent);
+    background-color: var(--color-background);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-primary);
+    letter-spacing: 0.5px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    margin-left: 25px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav a:hover, .nav a.active {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.cta-button {
+    background-color: var(--color-primary);
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 4px;
+    margin-left: 30px;
+    transition: background-color 0.3s;
+    border: none;
+}
+.cta-button:hover {
+    background-color: var(--color-accent);
+}
+
+/* --- Sección Hero de Subpágina --- */
+.hero-subpage {
+    background-color: var(--color-light-gray); /* Fondo suave */
+    padding: 80px 5%; 
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid var(--color-border); /* Separador sutil */
+}
+
+.hero-overlay {
+    background-color: transparent; 
+    color: var(--color-primary);
+    max-width: 900px; 
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 2.5em;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    color: var(--color-text);
+    max-width: 700px;
+    margin: 0 auto 0 auto; /* Ajustado para eliminar margen inferior excesivo */
+}
+
+/* --- Contenedores de Sección General --- */
+.padded-section {
+    padding: 60px 5%; 
+    background-color: var(--color-background);
+}
+
+.content-container {
+    max-width: 1000px; /* Ancho para el contenido dentro de las secciones */
+    margin: 0 auto; /* Centra el contenido dentro de la sección */
+}
+
+/* --- Estilos para Mision.html --- */
+.content-structure { /* Para `mision.html` y `programas.html` */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.principle-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--color-light-gray); /* Fondo para las tarjetas */
+}
+.principle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    flex-shrink: 0;
+    margin-right: 30px;
+    padding: 15px;
+    background-color: var(--color-background); /* Fondo blanco para el ícono */
+    border-radius: 50%;
+    line-height: 1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card-text h2 {
+    color: var(--color-primary);
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card-text p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* --- Estilos para Programas.html --- */
+.program-model-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.program-component-card {
+    padding: 35px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: var(--color-light-gray);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.component-title {
+    color: var(--color-primary);
+    font-size: 1.8em;
+    border-bottom: 3px solid var(--color-accent);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.component-intro-text {
+    font-style: italic;
+    font-size: 1em;
+    color: var(--color-text);
+    margin-bottom: 30px;
+}
+
+.program-feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.program-feature-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.program-feature-list li:last-child {
+    border-bottom: none;
+}
+
+.program-feature-title {
+    color: var(--color-text);
+    font-size: 1.15em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.program-feature-list p {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+/* --- Estilos para Transparencia.html --- */
+.transparency-block {
+    margin-bottom: 60px;
+    padding: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: var(--color-light-gray); /* Fondo sutil para bloques */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03); 
+}
+
+.transparency-block h2 {
+    color: var(--color-primary);
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--color-border); /* Línea de división suave */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    font-size: 1em;
+    color: var(--color-text);
+    margin-bottom: 25px;
+}
+
+/* Contenedor para tabla responsiva */
+.data-table-container {
+    overflow-x: auto; 
+    width: 100%; 
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95em;
+    min-width: 650px; /* Asegura que la tabla no se colapse en pantallas medianas */
+    border: 1px solid var(--color-border); /* Borde exterior para la tabla */
+    border-radius: 4px; /* Bordes suaves */
+    overflow: hidden; /* Para que el border-radius funcione con collapse */
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle; /* Centra verticalmente el texto */
+}
+
+.data-table thead th {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none; /* Elimina el borde inferior de la última fila

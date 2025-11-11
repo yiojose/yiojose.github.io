@@ -1,0 +1,243 @@
+/* --- ESTILOS ESPECÍFICOS PARA CONTACTO --- */
+
+/* --- Variables para colores --- */
+:root {
+    --color-primary: #002D62; /* Azul Marino Profundo (Confianza/Formal) */
+    --color-text: #333333;    /* Gris Oscuro (Legibilidad/Profesional) */
+    --color-background: #ffffff;
+    --color-accent: #007bff;  /* Azul brillante (Botones/Énfasis) */
+    --color-light-gray: #f4f4f9; /* Fondo muy sutil y limpio */
+    --color-border: #e0e0e0; /* Borde suave */
+}
+
+/* --- Base y Tipografía --- */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* --- Centrado Global de Contenido Principal --- */
+main {
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo para el contenido principal del sitio */
+    margin: 0 auto; /* ¡Esto centra todo el contenido dentro de <main>! */
+    box-shadow: 0 0 20px rgba(0,0,0,0.05); /* Sombra suave para dar profundidad */
+    background-color: var(--color-background); /* Asegura fondo blanco */
+}
+
+/* --- Encabezado (Header) --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%; 
+    border-bottom: 3px solid var(--color-accent);
+    background-color: var(--color-background);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-primary);
+    letter-spacing: 0.5px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    margin-left: 25px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav a:hover, .nav a.active {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.cta-button {
+    background-color: var(--color-primary);
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 4px;
+    margin-left: 30px;
+    transition: background-color 0.3s;
+    border: none;
+}
+.cta-button:hover {
+    background-color: var(--color-accent);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2/3 para el formulario, 1/3 para la info */
+    gap: 50px;
+}
+
+/* 1. Estilos del Formulario Corporativo */
+.corporate-form {
+    padding: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: var(--color-light-gray);
+}
+
+.contact-form-block h2 {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.corporate-form label {
+    display: block;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.corporate-form input[type="text"],
+.corporate-form input[type="email"],
+.corporate-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Incluye padding en el ancho */
+    font-family: inherit;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.corporate-form input:focus,
+.corporate-form textarea:focus {
+    border-color: var(--color-accent); /* Resalta el foco con el color de acento */
+    outline: none;
+}
+
+.corporate-form textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+/* 2. Estilos de Información y Redes */
+.contact-info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.info-details h2, .social-block h2 {
+    color: var(--color-primary);
+    font-size: 1.4em;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.detail-item i {
+    color: var(--color-accent);
+    margin-right: 15px;
+    font-size: 1.2em;
+    flex-shrink: 0;
+}
+
+.detail-item p {
+    margin: 0;
+}
+
+/* Estilos de Redes Sociales */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2em;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.facebook { background-color: #3b5998; }
+.instagram { 
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.whatsapp { background-color: #25d366; }
+.tiktok { background-color: #000000; }
+
+/* 3. Placeholder de Mapa (Visualización Simple) */
+.map-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #e0e0e0; /* Gris claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.map-placeholder p {
+    color: var(--color-text);
+    font-style: italic;
+    font-weight: 600;
+}
+
+
+/* Adaptación para móviles */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Apilar en una sola columna */
+    }
+
+    .contact-info-block {
+        margin-top: 30px;
+    }
+}
